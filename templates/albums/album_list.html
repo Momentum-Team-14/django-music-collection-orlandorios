@@ -1,7 +1,16 @@
 {% extends "base.html" %}
+
 {% block title %}home{% endblock %}
+
 {% block content %}
-{% for album in albums %}
-<p>{{ album }}</p>
-{% endfor %}
+
+<h1>Albums</h1>
+
+<div class="container">
+    {% for album in albums %}
+    <div class="album-box">
+        <a class="album-title" href="{% url 'album_detail' pk=album.pk %}"> {{ album }} </a>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
