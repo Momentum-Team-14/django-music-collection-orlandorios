@@ -4,5 +4,10 @@
 
 {% block content %}
         <h1>{{ album }}</h1>
+        <aside class="actions">
+                <a class="btn btn-secondary" href="{% url 'album_edit' pk=album.pk %}">
+                Edit Album
+                </a>
+        </aside>
 
 {% endblock %}
